@@ -138,14 +138,22 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 1199px) {
   #header {
-    left: -300px;
+      position: fixed;
+      left: -300px; /* Sidebar is hidden */
+      width: 250px;
+      height: 100vh;
+      background: #333;
+      color: white;
+      transition: left 0.3s ease-in-out;
   }
 
-  #main {
-    margin-left: 0;
+  #header.active {
+      left: 0; /* Sidebar appears */
   }
+
 }
 
+  
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
